@@ -30,7 +30,7 @@ public class BookController {
     public void deleteBookById(@PathVariable Long id) {
         bookRepository.deleteById(id);
     }
-
+    // not working
     @PutMapping(value = "{id}")
     public Book updateBook(@RequestBody Book book, @PathVariable Long id) {
         return bookRepository.save(book);
