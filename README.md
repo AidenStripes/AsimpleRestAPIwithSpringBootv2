@@ -1,4 +1,4 @@
-# AsimpleRestAPIwithSpringBoot
+# AsimpleRestAPIwithSpringBootv2
 
 Go to the website https://start.spring.io/
 
