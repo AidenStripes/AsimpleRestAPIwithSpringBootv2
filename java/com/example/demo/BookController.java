@@ -30,4 +30,13 @@ public class BookController {
     public void deleteBookById(@PathVariable Long id) {
         bookRepository.deleteById(id);
     }
+    
+    @PutMapping(value = "{id}")
+    public Book updateBook(@RequestBody Map<String, String> body, @PathVariable Long id) {
+        Book current = bookRepository.findById(id).get();
+        current.setAuthor(body.get("author"));
+        current.setTitle(body.get("title"));
+        bookRepository.save(current);
+        return current;
+    }
 }
