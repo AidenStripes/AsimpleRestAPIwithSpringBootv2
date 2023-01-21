@@ -2,6 +2,7 @@ package com.example.demo;
 
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 public class Book {
@@ -15,7 +16,7 @@ public class Book {
 
     @Column(nullable = false)
     private String author;
-    
+
     public Book() {
     }
 
@@ -36,7 +37,19 @@ public class Book {
     public String getAuthor() {
         return author;
     }
-    
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
